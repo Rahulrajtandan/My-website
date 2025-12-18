@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Lock Screen */
+#lockScreen {
+    position: fixed;
+    inset: 0;
+    background: #ff2e63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+/* Play Button */
+#playBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #ff005c;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
+
+/* Main */
+.container {
+    display: none;
+    padding: 90px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    width: 100%;
+    max-width: 360px;
+    background: rgba(255,255,255,0.25);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.photos img {
+    width: 45%;
+    height: 130px;
+    margin: 5px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* Popup */
+#popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+.popup-box {
+    background: #ff5e8e;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.popup-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #ff005c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Rain */
+.rain span {
+    position: fixed;
+    top: -50px;
+    font-size: 16px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+/* Hearts */
+.hearts span {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    to { transform: translateY(-110vh); opacity: 0; }
+}
